@@ -93,41 +93,6 @@ header {
   text-align: center; /* 내용 중앙 정렬 */
 }
 
-/* 상품 카드 스타일 */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.card {
-  width: 300px; /* 카드 폭 */
-  margin: 20px; /* 카드 간격 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  border-radius: 10px; /* 모서리 둥글게 */
-}
-
-.card img {
-  width: 100%; /* 이미지 가로 폭 */
-  height: auto; /* 이미지 높이 자동 조정 */
-  border-top-left-radius: 10px; /* 상단 왼쪽 모서리 둥글게 */
-  border-top-right-radius: 10px; /* 상단 오른쪽 모서리 둥글게 */
-}
-
-.card-body {
-  padding: 15px; /* 카드 내부 여백 */
-}
-
-.card-title {
-  font-size: 1.25rem; /* 카드 제목 글꼴 크기 */
-  margin-bottom: 15px; /* 제목과 내용 사이 간격 */
-}
-
-.card-text {
-  font-size: 1rem; /* 카드 내용 글꼴 크기 */
-  color: #333; /* 카드 내용 텍스트 색상 */
-}
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
