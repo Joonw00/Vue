@@ -9,16 +9,16 @@
     
     <!-- 각 내용 -->
     <section v-if="showingIntroduction">
-      <h3>에딕스만의 기술력</h3>
-      <p>1992년12월 1일 창립된 이래 만10년동안 업계의 치열한 경쟁에서 성공적으로 선두에 설 수 있었던 것은 많은 노하우와 막강한 기술력으로 한길을 걸어온 결과입니다.</p>
-      <p>그동안 많은 고객에게 컴퓨터 교육을 실시하고 새로운 정보를 공유하여 컴퓨터 인식에 많은 기여를 해왔습니다.</p>
+      <h3>{{ introductionContent.title }}</h3>
+      <p v-for="(paragraph, index) in introductionContent.paragraphs" :key="index">{{ paragraph }}</p>
     </section>
     
     <section v-if="showingBusinessHistory">
-      <h3>사업 내역</h3>
-      <h4>메인보드 유통</h4>    
-      <p>총판 및 대리점</p>  
-      <h4>유지 보수</h4>
+      <h3>{{ businessHistoryContent.title }}</h3>
+      <div v-for="(item, index) in businessHistoryContent.items" :key="index">
+        <h4>{{ item.subtitle }}</h4>
+        <p v-if="item.description">{{ item.description }}</p>
+      </div>
     </section>
     
     <section v-if="showingLocation">
@@ -35,9 +35,11 @@
   </div>
 </template>
 
-
 <script>
 import ButtonComponent from '@/components/ButtonComponent.vue';
+import introductionContent from '@/assets/about/business';
+import businessHistoryContent from '@/assets/about/intro';
+
 export default {
   name: 'AboutPage',
   components: {
@@ -47,7 +49,9 @@ export default {
     return {
       showingIntroduction: true, // 소개의 글 보여줄지 여부
       showingBusinessHistory: false, // 사업내역 보여줄지 여부
-      showingLocation: false // 위치 보여줄지 여부
+      showingLocation: false, // 위치 보여줄지 여부
+      introductionContent,
+      businessHistoryContent
     };
   },
   methods: {

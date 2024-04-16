@@ -18,6 +18,7 @@ public class AboutController {
     private final AboutService aboutService;
     @GetMapping
     public List<About> getAllAbouts() {
+        System.out.println("AboutController.getAllAbouts");
         return aboutService.findAll();
     }
 
