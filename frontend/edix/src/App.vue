@@ -28,8 +28,12 @@ export default {
 </script>
 
 <style>
-
-/* 네비게이션 바 스타일 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
 .navbar {
   background-color: #1e5799; /* 네비게이션 바 배경 색상 설정 */
   color: #fff;
@@ -37,11 +41,17 @@ export default {
   display: flex;
   justify-content: space-between; /* 로고와 페이지 목록을 양 끝으로 정렬 */
   align-items: center; /* 수직 방향 중앙 정렬 */
+  width: 100%; /* 좌우 꽉 차게 설정 */
+  padding: 0; /* 좌우 패딩 제거 */
+  box-sizing: border-box; /* 패딩과 보더가 너비에 포함되도록 */
 }
 
 .navbar-brand {
   font-size: 1.5rem; /* 로고 글꼴 크기 */
   font-weight: bold; /* 로고 글꼴 굵기 */
+  width: 20%; /* 로고의 너비를 전체의 20%로 설정 */
+  text-align: left; /* 로고를 왼쪽에 정렬 */
+  padding-left: 20%; /* 왼쪽 여백 */
 }
 
 .navbar-menu {
@@ -49,6 +59,9 @@ export default {
   display: flex;
   gap: 2rem; /* 메뉴 항목 간격 */
   margin: 0; /* 기본 마진 제거 */
+  width: 60%; /* 메뉴의 너비를 전체의 60%로 설정 */
+  justify-content: flex-end; /* 메뉴 항목을 오른쪽으로 정렬 */
+  padding-right: 20%; /* 오른쪽 여백 */
 }
 
 .navbar-menu li {
@@ -59,6 +72,7 @@ export default {
   text-decoration: none; /* 링크 밑줄 제거 */
   color: #fff;
 }
+
 
 /* 그라데이션 상단 바 스타일 */
 header {
