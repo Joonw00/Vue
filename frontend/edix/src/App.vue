@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <nav class="navbar">
-      <div class="navbar-brand">Edix 로고</div>
-      <ul class="navbar-menu">
-        <!-- <li><a href="/home">홈</a></li> -->
-        <li><a href="/about">회사 소개</a></li>
-        <li><a href="/product">제품</a></li>
-        <!-- <li><a href="/service">서비스</a></li> -->
-        <li><a href="/call">연락처</a></li>
-      </ul>
-    </nav>
-    <header> <!-- 상단 바 -->
-      <h1>Edix</h1>
-    </header>
+    <div class="nav-header-wrapper"> <!-- 공통 배경이 적용될 부모 요소 -->
+      <nav class="navbar">
+        <div class="navbar-brand">Edix 로고</div>
+        <ul class="navbar-menu">
+          <li><a href="/about">회사 소개</a></li>
+          <li><a href="/product">제품</a></li>
+          <li><a href="/call">연락처</a></li>
+        </ul>
+      </nav>
+      <header>
+        <h1>Edix</h1>
+      </header>
+    </div>
     <div class="main-wrapper">
-      <main class="content"> <!-- 페이지 컨텐츠 -->
+      <main class="content">
         <router-view />
       </main>
     </div>
@@ -76,15 +76,18 @@ html, body {
 
 /* 그라데이션 상단 바 스타일 */
 header {
-  background: linear-gradient(135deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+  background-image: url('~@/assets/HeaderImg.jpg');
+  background-size: cover; /* 이미지가 헤더를 꽉 채우도록 */
+  background-position: center; /* 이미지가 중앙에 오도록 */
   color: white;
-  height: 50vh; /* 그라데이션 상단 바 높이 조정 */
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 수직 방향 중앙 정렬 */
+  justify-content: center;
   text-align: center;
-  padding: 0; /* 상단 바 좌우 패딩 제거 */
+  padding: 0;
 }
+
 
 /* 제목과 설명 컨테이너 */
 .title-container {
