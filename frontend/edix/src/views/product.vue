@@ -22,9 +22,9 @@ export default {
   data() {
     return {
       products: [
-        { id: 1, title: '상품 1', imageUrl: require('@/assets/product/p3.jpg'), description: '상품 1에 대한 설명입니다.' },
-        { id: 2, title: '상품 2', imageUrl: require('@/assets/product/p3.jpg'), description: '상품 2에 대한 설명입니다.' },
-        { id: 3, title: '상품 3', imageUrl: require('@/assets/product/p3.jpg'), description: '상품 3에 대한 설명입니다.' },
+        { id: 1, title: 'P-Ⅲ 보드', imageUrl: require('@/assets/product/p3.jpg'), description: ' 400MHz FSB, AGP4X' },
+        { id: 2, title: 'P-Ⅳ 보드', imageUrl: require('@/assets/product/p4.jpg'), description: '상품 1에 대한 설명입니다.' },
+        { id: 3, title: '상품 3', imageUrl: require('@/assets/product/HeaderImg.jpg'), description: '상품 3에 대한 설명입니다.' },
         { id: 4, title: '상품 4', imageUrl: require('@/assets/product/p3.jpg'), description: '상품 4에 대한 설명입니다.' },
         { id: 5, title: '상품 5', imageUrl: require('@/assets/product/p3.jpg'), description: '상품 5에 대한 설명입니다.' },
       ],
@@ -69,13 +69,13 @@ export default {
 
 .card img {
   width: 100%; /* 이미지 가로 폭 */
-  height: auto; /* 이미지 높이 자동 조정 */
+  height: 150px; /* 고정된 이미지 높이 */
   border-top-left-radius: 10px; /* 상단 왼쪽 모서리 둥글게 */
   border-top-right-radius: 10px; /* 상단 오른쪽 모서리 둥글게 */
 }
 .card-img-top {
   width: 100%;
-  height: auto;
+  height: 150px; /* 고정된 이미지 높이 */
 }
 
 .card-title {

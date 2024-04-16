@@ -69,3 +69,33 @@ export default {
   }
 }
 </script>
+
+
+<style scoped>
+section {
+  padding: 20px; /* 패딩을 추가하여 내용이 좀 더 넓게 느껴지도록 함 */
+  margin-top: 20px; /* 타이틀과 내용 사이 여백 추가 */
+  background-color: #f9f9f9; /* 섹션 배경색을 추가하여 구분을 강조 */
+  border: 1px solid #ececec; /* 경계선 색상 설정 */
+  border-radius: 10px; /* 모서리를 둥글게 처리 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 섹션에 그림자 효과 추가 */
+  transition: all 0.3s ease-in-out; /* 부드러운 전환 효과 추가 */
+}
+section img {
+  max-width: 100%; /* 이미지가 섹션 너비를 넘지 않도록 */
+  height: auto; /* 이미지 비율 유지 */
+  margin-top: 20px; /* 이미지 상단 여백 추가 */
+  border-radius: 5px; /* 이미지 모서리 둥글게 처리 */
+}
+
+section h3 {
+  margin-bottom: 10px; /* 타이틀과 내용 사이 여백 추가 */
+  color: #555; /* 타이틀 색상 조정 */
+  font-weight: bold; /* 글꼴 굵기를 더욱 강조 */
+}
+
+section h4 {
+  color: #555; /* 부제목 색상 조정 */
+}
+
+</style>

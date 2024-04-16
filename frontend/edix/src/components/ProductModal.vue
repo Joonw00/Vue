@@ -51,6 +51,13 @@ export default {
   animation: slideIn 0.3s;
 }
 
+
+.modal-content img {
+  width: 100%; /* 이미지 너비를 모달 컨텐츠의 100%로 설정 */
+  height: auto; /* 이미지의 높이를 자동으로 설정하여 비율 유지 */
+  margin-bottom: 20px; /* 이미지 아래쪽에 여백 추가 */
+}
+
 .close {
   color: #666;
   float: right;
